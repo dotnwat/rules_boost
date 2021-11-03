@@ -82,7 +82,7 @@ def boost_library(
         linkopts = []
 
     return native.cc_library(
-        name = name,
+        name = "boost_" + name,
         visibility = visibility,
         defines = default_defines + defines,
         includes = ["."] + includes,
