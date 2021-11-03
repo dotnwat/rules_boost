@@ -81,6 +81,11 @@ def boost_library(
     if linkopts == None:
         linkopts = []
 
+    native.alias(
+        name = name,
+        actual = "boost_" + name,
+    )
+
     return native.cc_library(
         name = "boost_" + name,
         visibility = visibility,
